@@ -25,20 +25,32 @@ for (let i = 0; nome && idade && salario && sexo && estadoCivil; i++) {
   } else if (salario <= 0) {
     console.log("O salário deve ser maior que zero");
     salario = prompt("Insira um salário: ");
-  } else if (sexo != "f" && sexo != "m") {
-    console.log("O sexo deve ser f ou m");
+  } else if (
+    sexo != "feminino" &&
+    sexo != "Feminino" &&
+    sexo != "masculino" &&
+    sexo != "Masculino"
+  ) {
+    console.log("O sexo deve ser feminino ou masculino");
     sexo = prompt("Insira um sexo: ");
   } else if (
-    estadoCivil != "s" &&
-    estadoCivil != "c" &&
-    estadoCivil != "v" &&
-    estadoCivil != "d"
+    estadoCivil != "solteiro" &&
+    estadoCivil != "casado" &&
+    estadoCivil != "viuvo" &&
+    estadoCivil != "divorciado" &&
+    estadoCivil != "Solteiro" &&
+    estadoCivil != "Casado" &&
+    estadoCivil != "Viuvo" &&
+    estadoCivil != "Divorciado"
   ) {
-    console.log("O estado civil deve ser: s, c, v ou d");
+    console.log(
+      "O estado civil deve ser: solteiro, casado, viuvo ou divorciado"
+    );
     estadoCivil = prompt("Insira um estado civil: ");
   } else {
-    console.log("Informações cadastradas: ");
-    console.log(`\n Nome: ${nome}\n Idade: ${idade}\n Salário: ${salario}\n Sexo: ${sexo}\n Estado Civil: ${estadoCivil}\n`)
+    console.log(
+      `\n Olá ${nome} Suas informações foram cadastradas: \n Nome: ${nome}\n Idade: ${idade}\n Salário: R$ ${salario}\n Sexo: ${sexo}\n Estado Civil: ${estadoCivil}\n`
+    );
     break;
   }
 }
